@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Academia Norioma — Preparación preuniversitaria de calidad. Docentes expertos, clases personalizadas y simulacros de examen para que alcances tu meta universitaria." />
+  <title>Norioma | Academia Preuniversitaria</title>
+  <link rel="icon" href="src/assets/icons/Norioma Logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/templates/nav_footer.css" />
+  <link rel="stylesheet" href="css/pages/index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="contenedor-nav"></div>
+
+  <!-- ═══ HERO — Carrusel ════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="card-carrusel">
+      <div class="carousel-images" id="carousel">
+        <img src="src/assets/images/carrusel-1.jpeg" alt="Academia Norioma - Clases presenciales" />
+        <img src="src/assets/images/carrusel-2.jpeg" alt="Academia Norioma - Docentes expertos" />
+        <img src="src/assets/images/carrusel-3.jpeg" alt="Academia Norioma - Éxito universitario" />
+      </div>
+
+      <!-- Overlay de texto -->
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <span class="hero-badge"><i class="bi bi-star-fill"></i> Academia #1 en preparación</span>
+          <h1>Tu camino al éxito<br /><span class="hero-accent">universitario</span> comienza aquí</h1>
+          <p>Docentes expertos · Clases personalizadas · Simulacros de examen</p>
+          <div class="hero-cta-group">
+            <a href="pages/ciclos.html" class="btn-hero-primary">
+              <i class="bi bi-journal-bookmark-fill"></i> Ver Ciclos
+            </a>
+            <a href="https://wa.link/kkpqo3" target="_blank" class="btn-hero-secondary">
+              <i class="bi bi-whatsapp"></i> Inscríbete
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles -->
+      <button class="prev" onclick="moveSlide(-1)" aria-label="Anterior">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)" aria-label="Siguiente">&#10095;</button>
+
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <span class="indicator" onclick="currentSlide(0)"></span>
+        <span class="indicator" onclick="currentSlide(1)"></span>
+        <span class="indicator" onclick="currentSlide(2)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STATS ══════════════════════════════════════════════════ -->
+  <section id="stats">
+    <div class="stats-container">
+      <div class="stat-item" data-animate>
+        <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+        <div class="stat-number-row">
+          <span class="stat-number" data-target="500">0</span>
+          <span class="stat-plus">+</span>
+        </div>
+        <p class="stat-label">Alumnos formados</p>
+      </div>
+      <div class="stat-item" data-animate>
+        <div class="stat-icon"><i class="bi bi-person-badge-fill"></i></div>
+        <div class="stat-number-row">
+          <span class="stat-number" data-target="12">0</span>
+          <span class="stat-plus">+</span>
+        </div>
+        <p class="stat-label">Docentes expertos</p>
+      </div>
+      <div class="stat-item" data-animate>
+        <div class="stat-icon"><i class="bi bi-trophy-fill"></i></div>
+        <div class="stat-number-row">
+          <span class="stat-number" data-target="90">0</span>
+          <span class="stat-plus">%</span>
+        </div>
+        <p class="stat-label">Tasa de aprobación</p>
+      </div>
+      <div class="stat-item" data-animate>
+        <div class="stat-icon"><i class="bi bi-calendar-check-fill"></i></div>
+        <div class="stat-number-row">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-plus">+</span>
+        </div>
+        <p class="stat-label">Años de experiencia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ¿POR QUÉ NOSOTROS? ════════════════════════════════════ -->
+  <section id="why-us">
+    <div class="section-header" data-animate>
+      <span class="section-tag">Nuestra diferencia</span>
+      <h2>¿Por qué elegir <span class="accent-text">Norioma</span>?</h2>
+      <p>Más que una academia, somos tu equipo de apoyo hacia la universidad</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-animate>
+        <div class="why-icon"><i class="bi bi-lightbulb-fill"></i></div>
+        <h3>Metodología innovadora</h3>
+        <p>Técnicas de estudio probadas que potencian tu comprensión y memoria para los exámenes más exigentes.</p>
+      </div>
+      <div class="why-card" data-animate>
+        <div class="why-icon"><i class="bi bi-person-heart"></i></div>
+        <h3>Atención personalizada</h3>
+        <p>Grupos reducidos que permiten al docente conocer tus fortalezas y trabajar tus áreas de mejora.</p>
+      </div>
+      <div class="why-card" data-animate>
+        <div class="why-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+        <h3>Simulacros reales</h3>
+        <p>Practica con exámenes al estilo de las universidades más exigentes para llegar preparado el día D.</p>
+      </div>
+      <div class="why-card" data-animate>
+        <div class="why-icon"><i class="bi bi-graph-up-arrow"></i></div>
+        <h3>Seguimiento continuo</h3>
+        <p>Reportes de progreso periódicos para ti y tu familia, para que siempre sepas cómo vas avanzando.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BIENVENIDA (card-1) ═══════════════════════════════════ -->
+  <section id="card-1">
+    <div id="card-1-column-1" data-animate>
+      <span class="section-tag-dark">Prepárate con nosotros</span>
+      <h2>¡Da el primer paso hacia tu futuro universitario!</h2>
+      <p>
+        En Norioma, sabemos lo importante que es una preparación de calidad.
+        Únete a nuestro programa y accede a beneficios exclusivos:
+      </p>
+      <ul class="benefit-list">
+        <li><i class="bi bi-check-circle-fill"></i> Clases personalizadas con docentes expertos.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Simulacros de examen para cualquier desafío.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Atención individualizada para alcanzar tus metas.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Material de estudio actualizado y de calidad.</li>
+      </ul>
+      <a href="pages/ciclos.html" class="btn-primary">
+        Ver nuestros ciclos <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+    <div id="card-1-column-2" data-animate>
+      <div class="image-wrapper">
+        <img src="https://i.pinimg.com/736x/18/3e/24/183e24b12211121a82bfe80829d0c945.jpg"
+          alt="Estudiante exitoso con Norioma" />
+        <div class="image-badge">
+          <i class="bi bi-star-fill"></i>
+          <span>Más de 500 estudiantes exitosos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICIOS ════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="section-header" data-animate>
+      <span class="section-tag">Lo que ofrecemos</span>
+      <h2>Nuestros <span class="accent-text">Programas</span></h2>
+      <p>Elige el programa que mejor se adapte a tu ritmo y objetivos</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-animate>
+        <div class="service-icon-wrap">
+          <i class="bi bi-journal-bookmark-fill"></i>
+        </div>
+        <h3>Ciclo Escolar</h3>
+        <p>Preparación anual completa para dominar todas las materias y rendir el mejor examen de admisión.</p>
+        <a href="pages/ciclos.html" class="service-link">Saber más <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-card featured" data-animate>
+        <span class="service-badge">Más popular</span>
+        <div class="service-icon-wrap">
+          <i class="bi bi-lightning-fill"></i>
+        </div>
+        <h3>Ciclo Intensivo</h3>
+        <p>Repaso acelerado y enfocado en los temas de mayor peso en los exámenes de admisión recientes.</p>
+        <a href="pages/ciclos.html" class="service-link">Saber más <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-animate>
+        <div class="service-icon-wrap">
+          <i class="bi bi-clipboard2-check-fill"></i>
+        </div>
+        <h3>Simulacros</h3>
+        <p>Evaluaciones periódicas en condiciones reales de examen para medir tu nivel y reducir la ansiedad.</p>
+        <a href="pages/contactanos.html" class="service-link">Saber más <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIOS ══════════════════════════════════════════ -->
+  <section id="testimonials">
+    <div class="section-header" data-animate>
+      <span class="section-tag">Lo que dicen nuestros alumnos</span>
+      <h2>Historias de <span class="accent-text">Éxito</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" data-animate>
+        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+        <p class="testimonial-text">"Gracias a Norioma logré ingresar a mi universidad soñada. Los docentes son
+          increíbles y los simulacros me prepararon perfectamente."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="bi bi-person-circle"></i></div>
+          <div>
+            <strong>María G.</strong>
+            <span>Ingresó a la UNMSM</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-animate>
+        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+        <p class="testimonial-text">"El ambiente de estudio y la dedicación de los profesores marcaron una gran
+          diferencia. ¡En un ciclo mejoré mis notas notablemente!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="bi bi-person-circle"></i></div>
+          <div>
+            <strong>Carlos M.</strong>
+            <span>Ingresó a la UNI</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-animate>
+        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+        <p class="testimonial-text">"Lo que más valoro es la atención personalizada. Siempre tuve apoyo cuando no
+          entendía algún tema. ¡La recomiendo al 100%!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="bi bi-person-circle"></i></div>
+          <div>
+            <strong>Ana R.</strong>
+            <span>Ingresó a la PUCP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA / CONTACTO ════════════════════════════════════════ -->
+  <section id="contact-us">
+    <div class="contact-container" data-animate>
+      <div class="contact-message">
+        <span class="section-tag">¡No esperes más!</span>
+        <h2>Estás a un paso de comenzar tu camino hacia la universidad 🎓</h2>
+        <p>
+          No dejes pasar la oportunidad de prepararte con los mejores.
+          ¡Inscríbete ahora y empieza tu preparación! ¡Un futuro brillante te espera!
+        </p>
+        <p class="cta">
+          ¿Tienes dudas? ¡Contáctanos por WhatsApp y te ayudamos al instante!
+        </p>
+        <button class="whatsapp-button" onclick="window.open('https://wa.link/kkpqo3', '_blank')">
+          <i class="bi bi-whatsapp"></i> Contáctanos por WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.link/kkpqo3" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <div class="contenedor-footer"></div>
+
+  <script src="js/modules/nav_footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

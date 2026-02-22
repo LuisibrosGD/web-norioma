@@ -1,0 +1,389 @@
+/* =====================================================================
+   NORIOMA — CSS Global (nav + footer)
+   Paleta: amarillo #f6d001 | gris oscuro #4d4d4d | blanco #fff
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ── Variables de marca ─────────────────────────────────────────── */
+:root {
+  --color-primary: #f6d001;
+  --color-primary-dark: #e0bb00;
+  --color-primary-light: #ffe680;
+  --color-dark: #4d4d4d;
+  --color-dark-2: #333333;
+  --color-light: #f9f9f9;
+  --color-white: #ffffff;
+  --color-text: #333333;
+  --color-text-muted: #666666;
+
+  --font-main: 'Poppins', sans-serif;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.10);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.14);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.18);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --nav-height: 70px;
+  --transition: 0.3s ease;
+}
+
+/* ── Reset básico ────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   NAV
+   ════════════════════════════════════════════════════════════════════ */
+.contenedor-nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  width: 100%;
+  background: var(--color-primary);
+  padding: 0 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+nav.scrolled {
+  background: rgba(246, 208, 1, 0.96);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
+}
+
+/* ── Logo ── */
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 10px;
+}
+
+.logo-nav img {
+  width: auto;
+  height: 54px;
+  max-width: 220px;
+  display: block;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.logo-nav img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* ── Lista de navegación ── */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-a {
+  color: var(--color-dark-2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.lista-a:hover {
+  background: rgba(0, 0, 0, 0.10);
+  color: var(--color-dark-2);
+}
+
+.lista-nav {
+  margin-right: 0.5rem;
+}
+
+/* ── ítem resaltado (ej: Recursos) ── */
+.resaltar-nav {
+  background: var(--color-dark);
+  color: var(--color-primary) !important;
+}
+
+.resaltar-nav:hover {
+  background: #3a3a3a;
+  color: var(--color-primary-light) !important;
+}
+
+/* ── Botón hamburguesa (móvil) ── */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-dark-2);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+  line-height: 1;
+}
+
+.nav-toggle:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+#nav-toggle-close {
+  display: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════════════════════════════════════ */
+footer {
+  background: var(--color-dark);
+  color: #d9d9d9;
+  font-family: var(--font-main);
+  border-top: 4px solid var(--color-primary);
+  padding: 0;
+  width: 100%;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Col 1: logo + frase ── */
+.footer-col-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo-wrap img {
+  width: 64px;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+.footer-logo-wrap .footer-brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 220px;
+}
+
+/* ── Col 2 & 3: links ── */
+.footer-col h4 {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 1rem 0;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* ── Redes sociales ── */
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+}
+
+.footer-redes a i {
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.footer-redes a:hover {
+  color: var(--color-primary);
+}
+
+.footer-redes a:hover i {
+  background: rgba(246, 208, 1, 0.15);
+  color: var(--color-primary);
+}
+
+/* ── Pie de footer ── */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 1.2rem 2rem;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   RESPONSIVO (768px)
+   ──────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
+
+  .logo-nav img {
+    height: 40px;
+  }
+
+  .lista-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 72%;
+    height: 100vh;
+    background: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 90px;
+    margin: 0;
+    gap: 0.5rem;
+    transition: right 0.4s cubic-bezier(.4, 0, .2, 1);
+    z-index: 1000;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .lista-nav.active {
+    right: 0;
+  }
+
+  .lista-nav li {
+    width: 85%;
+  }
+
+  .lista-a {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  /* FOOTER */
+  .footer-main {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .footer-tagline {
+    max-width: 100%;
+  }
+
+  .footer-redes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-redes a span {
+    display: none;
+  }
+
+  .footer-redes a i {
+    font-size: 1.4rem;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-nav {
+    width: 100%;
+  }
+}

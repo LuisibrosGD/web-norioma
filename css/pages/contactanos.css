@@ -1,0 +1,331 @@
+/* =====================================================================
+   NORIOMA — contactanos.css
+   ===================================================================== */
+
+/* ── Banner ────────────────────────────────────────────────────────── */
+.page-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #fce44a 100%);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.page-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.page-banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--color-dark-2);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.page-banner-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--color-dark-2);
+  margin: 0 0 0.6rem 0;
+}
+
+.page-banner-content h1 span {
+  color: var(--color-dark);
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.15);
+  text-underline-offset: 5px;
+}
+
+.page-banner-content p {
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* ── Sección principal ──────────────────────────────────────────── */
+#contact-us {
+  padding: 5rem 4%;
+  background: var(--color-light);
+  min-height: 60vh;
+}
+
+.contact-main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* ── Columna izquierda ──────────────────────────────────────────── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  background: var(--color-primary-light);
+  color: var(--color-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+}
+
+.contact-info h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: var(--color-dark-2);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.contact-info>p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--color-white);
+  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-detail-icon {
+  width: 46px;
+  height: 46px;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--color-dark-2);
+  flex-shrink: 0;
+}
+
+.contact-detail strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark-2);
+  margin-bottom: 0.2rem;
+}
+
+.contact-detail p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Columna derecha — tarjetas de contacto ─────────────────────── */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-cards-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.25rem 0;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-left: 4px solid transparent;
+}
+
+.contact-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.contact-card-body {
+  flex: 1;
+}
+
+.contact-card-body strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark-2);
+}
+
+.contact-card-body span {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.contact-card-arrow {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover .contact-card-arrow {
+  transform: translateX(4px);
+}
+
+/* Colores de cada red */
+.contact-card.whatsapp {
+  border-left-color: #25d366;
+}
+
+.contact-card.whatsapp .contact-card-icon {
+  background: #25d366;
+}
+
+.contact-card.instagram {
+  border-left-color: #e1306c;
+}
+
+.contact-card.instagram .contact-card-icon {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.contact-card.facebook {
+  border-left-color: #1877f2;
+}
+
+.contact-card.facebook .contact-card-icon {
+  background: #1877f2;
+}
+
+.contact-card.youtube {
+  border-left-color: #ff0000;
+}
+
+.contact-card.youtube .contact-card-icon {
+  background: #ff0000;
+}
+
+.contact-card.tiktok {
+  border-left-color: #010101;
+}
+
+.contact-card.tiktok .contact-card-icon {
+  background: #010101;
+}
+
+/* ── Animación de entrada ───────────────────────────────────────── */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Botón flotante WhatsApp ────────────────────────────────────── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+  z-index: 999;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12) rotate(-8deg);
+}
+
+/* ── Responsivo ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .contact-main-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #contact-us {
+    padding: 3rem 1.2rem;
+  }
+
+  .page-banner {
+    padding: 3rem 1.2rem 2.5rem;
+  }
+}
